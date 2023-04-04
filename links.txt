@@ -1,0 +1,10 @@
+Descargar go = https://go.dev/dl/
+Descargar Vscode = https://code.visualstudio.com/
+
+1.- Iniciar proyecto
+
+go mod init github.com/Msmpunk/claseGo
+
+2.- Utilizar dependencia de go
+
+uuid repo =  go get github.com/google/uuid
