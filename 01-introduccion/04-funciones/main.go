@@ -11,6 +11,16 @@ func main() {
 	fmt.Println(resultado)
 	fmt.Println(resultado2)
 	fmt.Println(resultadoEsPrimo)
+
+	cociente, err := dividir(10, 0)
+	if err != nil {
+		// Manejar el error
+		fmt.Println("No se puede dividir entre 0")
+	} else {
+		// Usar el valor del cociente
+		fmt.Println("El valor es:", cociente)
+	}
+
 }
 
 func suma(a int, b int) int {
@@ -48,4 +58,13 @@ func max(nums []int) int {
 		}
 	}
 	return max
+}
+
+func dividir(a, b float64) (float64, error) {
+	if b == 0 {
+		// Retornamos un error si el divisor es cero
+		return 0, fmt.Errorf("El divisor no puede ser cero")
+	}
+	// Retornamos el cociente y un valor nulo para el error
+	return a / b, nil
 }
